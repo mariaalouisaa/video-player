@@ -4,7 +4,7 @@
   height: 250px;
 }
 video {
-  height: 250px;
+  height: 100%;
 }
 .controls-banner {
   /*Make hidden on default and visable on container video hover*/
@@ -36,7 +36,7 @@ span {
 }
 
 #play {
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 .flex {

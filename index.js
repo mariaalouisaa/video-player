@@ -9,9 +9,12 @@ document.querySelector("#play").addEventListener("click", () => {
   //change playing varible for ability to toggle
   playing ? (playing = false) : (playing = true);
   if (!length) showDuration();
+  showVideoCurrentTime();
 });
 
-// Display video total length
+//----------------- TIME DISPLAY ---------------/
+
+// Display total video length
 const showDuration = () => {
   length = video.duration;
   //turn seconds into mins
@@ -21,6 +24,16 @@ const showDuration = () => {
   if (secs < 10) mins = "0" + secs;
   document.querySelector(".duration").innerHTML = `${mins}:${secs}`;
 };
+
+// Display current time of video play
+const showVideoCurrentTime = () => {
+  setInterval(() => {
+    let currentTime = Math.floor(video.currentTime);
+    console.log(currentTime);
+  }, 1000);
+};
+
+//--------------- FULLSCREEN -----------------//
 
 // Open fullscreen
 const openFullscreen = () => {

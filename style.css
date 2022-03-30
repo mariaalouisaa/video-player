@@ -1,21 +1,45 @@
 .container {
   border: solid 3px;
   width: 500px;
-  height: 310px;
+  height: 250px;
 }
 video {
   height: 250px;
 }
 .controls-banner {
-  background-color: rgba(0, 0, 0, 0.514);
+  /*Make hidden on default and visable on container video hover*/
+  background-color: rgba(224, 16, 16, 0.377); /*change later!*/
   height: 50px;
   padding: 5px 10px 0 10px;
+  position: relative;
+  top: -60px;
+  z-index: 5;
 }
 
 .progress {
-  width: 100%;
+  width: 80%;
+}
+
+span {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 
 .time {
   color: white;
+}
+
+.volume-progress {
+  width: 100px;
+}
+
+#play {
+  margin-right: 100px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }

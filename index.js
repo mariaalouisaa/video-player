@@ -1,6 +1,7 @@
 const video = document.querySelector("#video");
+let playing = false;
 
 document.querySelector("#play").addEventListener("click", () => {
-  console.log(video);
-  video.play();
+  playing ? video.pause() : video.play();
+  playing ? (playing = false) : (playing = true);
 });

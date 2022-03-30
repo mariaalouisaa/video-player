@@ -1,0 +1,21 @@
+.container {
+  border: solid 3px;
+  width: 500px;
+  height: 310px;
+}
+video {
+  height: 250px;
+}
+.controls-banner {
+  background-color: rgba(0, 0, 0, 0.514);
+  height: 50px;
+  padding: 5px 10px 0 10px;
+}
+
+.progress {
+  width: 100%;
+}
+
+.time {
+  color: white;
+}

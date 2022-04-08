@@ -7,6 +7,15 @@
 video {
   height: 100%;
 }
+
+img {
+  width: 2em;
+}
+
+button {
+  background: none;
+  border: none;
+}
 .controls-banner {
   /*Make hidden on default and visable on container video hover*/
   background-color: rgba(224, 16, 16, 0.377); /*change later!*/

@@ -2,6 +2,7 @@
   border: solid 3px;
   width: 500px;
   height: 250px;
+  margin: 0 auto;
 }
 video {
   height: 100%;

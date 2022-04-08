@@ -52,7 +52,8 @@ const showVideoCurrentTime = () => {
 //--------------- PROGRESS BAR -----------------//
 
 document.querySelector("#progress").oninput = function () {
-  console.log(this.value);
+  console.log(this.value); // num 1 - 100
+  // will need to make this change current video time
 };
 
 //--------------- FULLSCREEN -----------------//
@@ -98,6 +99,13 @@ const closeFullscreen = () => {
 const muteToggle = () => {
   muted ? (muted = false) : (muted = true); //maybe change to if else and toggle the button icon...?
   muted ? (video.muted = true) : (video.muted = false);
+};
+
+//--------------- VOLUME -----------------//
+
+document.querySelector("#volume-progress").oninput = function () {
+  console.log(this.value); // num 1 - 100
+  // will need to make this change current video time
 };
 
 //--------------- EVENTLISTENERS ------------//

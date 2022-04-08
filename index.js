@@ -113,6 +113,7 @@ const muteToggle = () => {
 document.querySelector("#volume-progress").oninput = function () {
   console.log(this.value); // num 1 - 100
   // will need to make this change current video time
+  // use a sum to divide the total length by 100 * value
 };
 
 //--------------- EVENTLISTENERS ------------//
@@ -123,6 +124,4 @@ document.querySelector("#sound").addEventListener("click", muteToggle);
 
 // ------- Still to do... ----------
 // adjust sound with sound progress bar
-// addust video play time with main progress bar
-// Control bar hidden on default and shown when curser is on hover of video container
-// Add favicon
+// adjust video play time with main progress bar

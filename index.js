@@ -69,6 +69,7 @@ const closeFullscreen = () => {
 document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 
 // ------- Still to do... ----------
+// The play button image should toggle to pause icon
 // Show time elapsed on left of progress bar
 // click on sound button mutes/unmutes
 // adjust sound with sound progress bar

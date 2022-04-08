@@ -1,19 +1,28 @@
 .container {
   border: solid 3px;
-  width: 500px;
-  height: 250px;
+  width: 520px;
+  height: 260px;
   margin: 0 auto;
 }
 video {
   height: 100%;
 }
+
+img {
+  width: 1.5em;
+}
+
+button {
+  background: none;
+  border: none;
+}
 .controls-banner {
   /*Make hidden on default and visable on container video hover*/
   background-color: rgba(224, 16, 16, 0.377); /*change later!*/
-  height: 50px;
+  height: 60px;
   padding: 5px 10px 0 10px;
   position: relative;
-  top: -60px;
+  top: -70px;
   z-index: 5;
 }
 
@@ -38,6 +47,12 @@ span {
 
 #play {
   margin-right: 80px;
+}
+
+.play {
+  height: 3em;
+  width: 3em;
+  padding-bottom: 10px;
 }
 
 .flex {

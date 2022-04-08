@@ -19,7 +19,7 @@ document.querySelector("#play").addEventListener("click", () => {
   }
 
   if (!length) showDuration();
-  // showVideoCurrentTime();
+  showVideoCurrentTime();
 });
 
 //----------------- TIME DISPLAY ---------------/
@@ -31,17 +31,23 @@ const showDuration = () => {
   let mins = Math.floor(length / 60);
   let secs = Math.round(length - mins * 60);
   if (mins < 10) mins = "0" + mins;
-  if (secs < 10) mins = "0" + secs;
+  if (secs < 10) secs = "0" + secs;
   document.querySelector(".duration").innerHTML = `${mins}:${secs}`;
 };
 
 // Display current time of video play
-// const showVideoCurrentTime = () => {
-//   setInterval(() => {
-//     let currentTime = Math.floor(video.currentTime);
-//     console.log(currentTime);
-//   }, 1000);
-// };
+const showVideoCurrentTime = () => {
+  const display = document.querySelector("#start");
+  setInterval(() => {
+    let time = Math.floor(video.currentTime);
+    let mins = Math.floor(time / 60);
+    let secs = Math.round(time - mins * 60);
+    if (mins < 10) mins = "0" + mins;
+    if (secs < 10) secs = "0" + secs;
+    display.innerHTML = `${mins}:${secs}`;
+  }, 1000);
+  // the interval still runs on pause (see console) would be good to clearInterval
+};
 
 //--------------- FULLSCREEN -----------------//
 
@@ -84,9 +90,11 @@ const closeFullscreen = () => {
 //--------------- MUTE -----------------//
 
 const muteToggle = () => {
-  muted ? (muted = false) : (muted = true);
+  muted ? (muted = false) : (muted = true); //maybe change to if else and toggle the button icon...?
   muted ? (video.muted = true) : (video.muted = false);
 };
+
+//--------------- EVENTLISTENERS ------------//
 
 document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 
@@ -94,7 +102,6 @@ document.querySelector("#sound").addEventListener("click", muteToggle);
 
 // ------- Still to do... ----------
 // Show time elapsed on left of progress bar
-// click on sound button mutes/unmutes
 // adjust sound with sound progress bar
 // addust video play time with main progress bar
 // Control bar hidden on default and shown when curser is on hover of video container

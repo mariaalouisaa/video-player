@@ -6,16 +6,22 @@ The design is going to be based on the BBC iPlayer video player!
 
 ---
 
-### Features to be include:
+### Features include:
 
-- [ ] Play & pause functionality
-- [ ] Small screen to fullscreen
-- [ ] Progress bar with functionality to change video play time
-- [ ] Sound adjustment
-- [ ] Sound mute (toggle)
+- Play & pause functionality
+- Small screen to fullscreen
+- Sound mute (toggle)
+- Personalised favicon
 
 --- 
 
-Site will be hosted in GitHub Pages.
+### Still to add:
 
-*This repo will be coded and maintained entirely by myself, solely for the purpose of practicing JS.*
+- Progress bar with functionality to change video play time
+- Sound adjustment
+
+---
+
+Site hosted on [GitHub Pages](https://mariaalouisaa.github.io/video-player/)!
+
+*This repo is coded and maintained entirely by myself, solely for the purpose of practicing JS.*

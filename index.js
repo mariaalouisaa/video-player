@@ -1,14 +1,14 @@
 const video = document.querySelector("#video1");
 const screen = document.querySelector(".container");
-const play = document.querySelector(".play");
 let playing = false;
 let length;
 
 //----------------- PLAY & PAUSE ---------------/
 
 document.querySelector("#play").addEventListener("click", () => {
+  const play = document.querySelector(".play");
   playing ? video.pause() : video.play();
-  //change playing varible for ability to toggle
+  //change playing varible for ability to toggle playmode and icon
   if (playing) {
     playing = false;
     play.src = "images/play.png";
@@ -46,7 +46,9 @@ const showDuration = () => {
 
 // Open fullscreen
 const openFullscreen = () => {
-  console.log("clicked");
+  //change icon
+  document.querySelector(".fullscreen").src = "images/exit-full.png";
+  // cover full screen for different browsers
   if (!document.fullscreenElement) {
     if (screen.requestFullscreen) {
       screen.requestFullscreen();
@@ -64,6 +66,9 @@ const openFullscreen = () => {
 
 // Close fullscreen
 const closeFullscreen = () => {
+  //change icon
+  document.querySelector(".fullscreen").src = "images/fullscreen.png";
+  // cover full screen for different browsers
   if (document.exitFullscreen) {
     document.exitFullscreen();
   } else if (document.webkitExitFullscreen) {

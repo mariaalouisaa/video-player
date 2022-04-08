@@ -97,7 +97,14 @@ const closeFullscreen = () => {
 //--------------- MUTE -----------------//
 
 const muteToggle = () => {
-  muted ? (muted = false) : (muted = true); //maybe change to if else and toggle the button icon...?
+  const volumeIcon = document.querySelector(".sound");
+  if (muted) {
+    muted = false;
+    volumeIcon.src = "images/volume.png";
+  } else {
+    muted = true;
+    volumeIcon.src = "images/mute.png";
+  }
   muted ? (video.muted = true) : (video.muted = false);
 };
 

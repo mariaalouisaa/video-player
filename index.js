@@ -113,6 +113,7 @@ const muteToggle = () => {
 document.querySelector("#volume-progress").oninput = function () {
   console.log(this.value); // num 1 - 100
   // will need to make this change current video time
+  // use a sum to divide the total length by 100 * value
 };
 
 //--------------- EVENTLISTENERS ------------//

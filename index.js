@@ -2,6 +2,7 @@ const video = document.querySelector("#video1");
 const screen = document.querySelector(".container");
 let playing = false;
 let length;
+let muted = false;
 
 //----------------- PLAY & PAUSE ---------------/
 
@@ -80,14 +81,21 @@ const closeFullscreen = () => {
   }
 };
 
+//--------------- MUTE -----------------//
+
+const muteToggle = () => {
+  muted ? (muted = false) : (muted = true);
+  muted ? (video.muted = true) : (video.muted = false);
+};
+
 document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 
+document.querySelector("#sound").addEventListener("click", muteToggle);
+
 // ------- Still to do... ----------
-// The play button image should toggle to pause icon
 // Show time elapsed on left of progress bar
 // click on sound button mutes/unmutes
 // adjust sound with sound progress bar
 // addust video play time with main progress bar
 // Control bar hidden on default and shown when curser is on hover of video container
-// Add icons to buttons
 // Add favicon

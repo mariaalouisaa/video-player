@@ -101,7 +101,6 @@ document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 document.querySelector("#sound").addEventListener("click", muteToggle);
 
 // ------- Still to do... ----------
-// Show time elapsed on left of progress bar
 // adjust sound with sound progress bar
 // addust video play time with main progress bar
 // Control bar hidden on default and shown when curser is on hover of video container

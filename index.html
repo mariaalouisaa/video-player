@@ -16,7 +16,14 @@
       <div class="controls-banner">
         <div class="flex">
           <span id="start">00:00</span>
-          <progress value="0" max="100" class="progress"></progress>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="1"
+            class="slider progress"
+            id="progress"
+          />
           <span class="duration">00:00</span>
         </div>
         <div class="flex">
@@ -24,7 +31,14 @@
             <button type="button" id="sound">
               <img src="images/volume.png" alt="volume" class="sound" />
             </button>
-            <progress class="volume-progress" value="0" max="10"></progress>
+            <input
+              type="range"
+              min="1"
+              max="10"
+              value="2"
+              class="slider volume-progress"
+              id="volume-progress"
+            />
           </div>
           <button type="button" id="play">
             <img src="images/play.png" alt="play" class="play" />

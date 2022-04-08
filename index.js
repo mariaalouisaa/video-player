@@ -49,6 +49,12 @@ const showVideoCurrentTime = () => {
   // the interval still runs on pause (see console) would be good to clearInterval
 };
 
+//--------------- PROGRESS BAR -----------------//
+
+document.querySelector("#progress").oninput = function () {
+  console.log(this.value);
+};
+
 //--------------- FULLSCREEN -----------------//
 
 // Open fullscreen

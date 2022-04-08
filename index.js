@@ -3,11 +3,17 @@ const screen = document.querySelector(".container");
 let playing = false;
 let length;
 
-// Play & Pause functionality
+//----------------- PLAY & PAUSE ---------------/
+
 document.querySelector("#play").addEventListener("click", () => {
   playing ? video.pause() : video.play();
   //change playing varible for ability to toggle
-  playing ? (playing = false) : (playing = true);
+  if (playing) {
+    playing = false;
+  } else {
+    playing = true;
+  }
+
   if (!length) showDuration();
   showVideoCurrentTime();
 });

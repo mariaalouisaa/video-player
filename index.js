@@ -1,5 +1,6 @@
 const video = document.querySelector("#video1");
 const screen = document.querySelector(".container");
+const play = document.querySelector(".play");
 let playing = false;
 let length;
 
@@ -10,12 +11,14 @@ document.querySelector("#play").addEventListener("click", () => {
   //change playing varible for ability to toggle
   if (playing) {
     playing = false;
+    play.src = "images/play.png";
   } else {
     playing = true;
+    play.src = "images/pause.png";
   }
 
   if (!length) showDuration();
-  showVideoCurrentTime();
+  // showVideoCurrentTime();
 });
 
 //----------------- TIME DISPLAY ---------------/
@@ -32,12 +35,12 @@ const showDuration = () => {
 };
 
 // Display current time of video play
-const showVideoCurrentTime = () => {
-  setInterval(() => {
-    let currentTime = Math.floor(video.currentTime);
-    console.log(currentTime);
-  }, 1000);
-};
+// const showVideoCurrentTime = () => {
+//   setInterval(() => {
+//     let currentTime = Math.floor(video.currentTime);
+//     console.log(currentTime);
+//   }, 1000);
+// };
 
 //--------------- FULLSCREEN -----------------//
 

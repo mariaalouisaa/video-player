@@ -74,3 +74,5 @@ document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 // adjust sound with sound progress bar
 // addust video play time with main progress bar
 // Progress bar hidden on default and shown when curser is on video container
+// Add icons to buttons
+// Add favicon

@@ -69,10 +69,11 @@ const closeFullscreen = () => {
 document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 
 // ------- Still to do... ----------
+// The play button image should toggle to pause icon
 // Show time elapsed on left of progress bar
 // click on sound button mutes/unmutes
 // adjust sound with sound progress bar
 // addust video play time with main progress bar
-// Progress bar hidden on default and shown when curser is on video container
+// Control bar hidden on default and shown when curser is on hover of video container
 // Add icons to buttons
 // Add favicon

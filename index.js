@@ -123,5 +123,4 @@ document.querySelector("#sound").addEventListener("click", muteToggle);
 
 // ------- Still to do... ----------
 // adjust sound with sound progress bar
-// addust video play time with main progress bar
-// Add favicon
+// adjust video play time with main progress bar

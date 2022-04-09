@@ -1,4 +1,5 @@
 const video = document.querySelector("#video1");
+video.volume = 0.5;
 const screen = document.querySelector(".container");
 let playing = false;
 let length;
@@ -54,6 +55,7 @@ const showVideoCurrentTime = () => {
 document.querySelector("#progress").oninput = function () {
   console.log(this.value); // num 1 - 100
   // will need to make this change current video time
+  // use a sum to divide the total length by 100 * value
 };
 
 //--------------- FULLSCREEN -----------------//
@@ -111,9 +113,8 @@ const muteToggle = () => {
 //--------------- VOLUME -----------------//
 
 document.querySelector("#volume-progress").oninput = function () {
-  console.log(this.value); // num 1 - 100
+  console.log(this.value / 10); // num 1 - 100
   // will need to make this change current video time
-  // use a sum to divide the total length by 100 * value
 };
 
 //--------------- EVENTLISTENERS ------------//

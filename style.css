@@ -16,7 +16,7 @@ button {
   border: none;
 }
 .controls-banner {
-  display: none;
+  /* display: none;*/
   background-color: rgba(170, 170, 170, 0.388); /*change later!*/
   height: 60px;
   padding: 5px 10px 0 10px;
@@ -59,6 +59,6 @@ span {
   justify-content: space-between;
 }
 
-video:hover + .controls-banner {
+/*video:hover + .controls-banner {
   display: block;
-}
+}*/

@@ -11,6 +11,7 @@ The design is going to be based on the BBC iPlayer video player!
 - Play & pause functionality
 - Small screen to fullscreen
 - Sound mute (toggle)
+- Sound volume adjustable
 - Personalised favicon
 
 --- 
@@ -18,7 +19,6 @@ The design is going to be based on the BBC iPlayer video player!
 ### Still to add:
 
 - Progress bar with functionality to change video play time
-- Sound adjustment
 
 ---
 

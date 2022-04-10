@@ -55,6 +55,7 @@ const showVideoCurrentTime = () => {
 
 document.querySelector("#progress").oninput = function () {
   console.log(this.value); // num 1 - 100
+  console.log(video.currentTime);
   // will need to make this change current video time
   // use a sum to divide the total length by 100 * value
 };

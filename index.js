@@ -1,5 +1,7 @@
 const video = document.querySelector("#video1");
+video.volume = 0.5;
 const screen = document.querySelector(".container");
+const volumeIcon = document.querySelector(".sound");
 let playing = false;
 let length;
 let muted = false;
@@ -53,7 +55,9 @@ const showVideoCurrentTime = () => {
 
 document.querySelector("#progress").oninput = function () {
   console.log(this.value); // num 1 - 100
+  console.log(video.currentTime);
   // will need to make this change current video time
+  // use a sum to divide the total length by 100 * value
 };
 
 //--------------- FULLSCREEN -----------------//
@@ -97,7 +101,6 @@ const closeFullscreen = () => {
 //--------------- MUTE -----------------//
 
 const muteToggle = () => {
-  const volumeIcon = document.querySelector(".sound");
   if (muted) {
     muted = false;
     volumeIcon.src = "images/volume.png";
@@ -111,9 +114,15 @@ const muteToggle = () => {
 //--------------- VOLUME -----------------//
 
 document.querySelector("#volume-progress").oninput = function () {
-  console.log(this.value); // num 1 - 100
-  // will need to make this change current video time
-  // use a sum to divide the total length by 100 * value
+  if (this.value > 0) {
+    muted = false;
+    volumeIcon.src = "images/volume.png";
+    video.volume = this.value / 10;
+  } else {
+    volumeIcon.src = "images/mute.png";
+    muted = true;
+    video.muted = true;
+  }
 };
 
 //--------------- EVENTLISTENERS ------------//
@@ -123,5 +132,4 @@ document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 document.querySelector("#sound").addEventListener("click", muteToggle);
 
 // ------- Still to do... ----------
-// adjust sound with sound progress bar
 // adjust video play time with main progress bar

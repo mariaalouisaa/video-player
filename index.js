@@ -113,16 +113,15 @@ const muteToggle = () => {
 //--------------- VOLUME -----------------//
 
 document.querySelector("#volume-progress").oninput = function () {
-  if (this.value === 0) {
-    muted = true;
-    volumeIcon.src = "images/mute.png";
-    video.muted = true;
-  } else {
+  if (this.value > 0) {
     muted = false;
     volumeIcon.src = "images/volume.png";
     video.volume = this.value / 10;
+  } else {
+    volumeIcon.src = "images/mute.png";
+    muted = true;
+    video.muted = true;
   }
-  console.log(video.volume);
 };
 
 //--------------- EVENTLISTENERS ------------//
@@ -132,5 +131,4 @@ document.querySelector("#fullscreen").addEventListener("click", openFullscreen);
 document.querySelector("#sound").addEventListener("click", muteToggle);
 
 // ------- Still to do... ----------
-// adjust sound with sound progress bar
 // adjust video play time with main progress bar

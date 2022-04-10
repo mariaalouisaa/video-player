@@ -1,6 +1,7 @@
 const video = document.querySelector("#video1");
 video.volume = 0.5;
 const screen = document.querySelector(".container");
+const volumeIcon = document.querySelector(".sound");
 let playing = false;
 let length;
 let muted = false;
@@ -99,7 +100,6 @@ const closeFullscreen = () => {
 //--------------- MUTE -----------------//
 
 const muteToggle = () => {
-  const volumeIcon = document.querySelector(".sound");
   if (muted) {
     muted = false;
     volumeIcon.src = "images/volume.png";
@@ -113,8 +113,16 @@ const muteToggle = () => {
 //--------------- VOLUME -----------------//
 
 document.querySelector("#volume-progress").oninput = function () {
-  console.log(this.value / 10); // num 1 - 100
-  // will need to make this change current video time
+  if (this.value === 0) {
+    muted = true;
+    volumeIcon.src = "images/mute.png";
+    video.muted = true;
+  } else {
+    muted = false;
+    volumeIcon.src = "images/volume.png";
+    video.volume = this.value / 10;
+  }
+  console.log(video.volume);
 };
 
 //--------------- EVENTLISTENERS ------------//

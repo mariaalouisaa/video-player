@@ -1,8 +1,6 @@
 # video-player
 
-Inspired by a take-home challenge (part of the Founders & Coders course) I have decided to create a JS video player.
-
-The design is going to be based on the BBC iPlayer video player!
+Inspired by a take-home challenge (part of the Founders & Coders course) I have decided to create a JS video player, with custom made controls!
 
 ---
 
@@ -13,6 +11,7 @@ The design is going to be based on the BBC iPlayer video player!
 - Sound mute (toggle)
 - Sound volume adjustable
 - Personalised favicon
+- Personalised styling for the range input bars.
 
 --- 
 

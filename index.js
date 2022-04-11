@@ -26,14 +26,18 @@ document.querySelector("#play").addEventListener("click", () => {
 
 //----------------- TIME DISPLAY ---------------/
 
+const formatMins = (time) => {
+  let mins = Math.floor(time / 60);
+  if (mins < 10) mins = "0" + mins;
+  return mins;
+};
+
 // Display total video length
 const showDuration = () => {
   length = video.duration;
   //turn seconds into mins
-  let mins = Math.floor(length / 60);
-  let secs = Math.round(length - mins * 60);
-  if (mins < 10) mins = "0" + mins;
-  if (secs < 10) secs = "0" + secs;
+  const mins = formatMins(length);
+  const secs = formatSecs(length);
   document.querySelector(".duration").innerHTML = `${mins}:${secs}`;
 };
 
@@ -41,11 +45,9 @@ const showDuration = () => {
 const showVideoCurrentTime = () => {
   const display = document.querySelector("#start");
   setInterval(() => {
-    let time = Math.floor(video.currentTime);
-    let mins = Math.floor(time / 60);
-    let secs = Math.round(time - mins * 60);
-    if (mins < 10) mins = "0" + mins;
-    if (secs < 10) secs = "0" + secs;
+    const time = Math.floor(video.currentTime);
+    const mins = formatMins(time);
+    const secs = formatSecs(time);
     display.innerHTML = `${mins}:${secs}`;
   }, 1000);
   // the interval still runs on pause (see console) would be good to clearInterval

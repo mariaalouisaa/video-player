@@ -32,6 +32,13 @@ const formatMins = (time) => {
   return mins;
 };
 
+const formatSecs = (time) => {
+  let mins = Math.floor(time / 60);
+  let secs = Math.round(time - mins * 60);
+  if (secs < 10) secs = "0" + secs;
+  return secs;
+};
+
 // Display total video length
 const showDuration = () => {
   length = video.duration;

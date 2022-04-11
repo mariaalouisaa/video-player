@@ -5,6 +5,7 @@ const volumeIcon = document.querySelector(".sound");
 let playing = false;
 let length;
 let muted = false;
+let mins;
 
 //----------------- PLAY & PAUSE ---------------/
 
@@ -26,14 +27,14 @@ document.querySelector("#play").addEventListener("click", () => {
 
 //----------------- TIME DISPLAY ---------------/
 
+//Reusable format time functions
 const formatMins = (time) => {
-  let mins = Math.floor(time / 60);
+  mins = Math.floor(time / 60);
   if (mins < 10) mins = "0" + mins;
   return mins;
 };
 
 const formatSecs = (time) => {
-  let mins = Math.floor(time / 60);
   let secs = Math.round(time - mins * 60);
   if (secs < 10) secs = "0" + secs;
   return secs;
@@ -41,10 +42,8 @@ const formatSecs = (time) => {
 
 // Display total video length
 const showDuration = () => {
-  length = video.duration;
-  //turn seconds into mins
-  const mins = formatMins(length);
-  const secs = formatSecs(length);
+  const mins = formatMins(video.duration);
+  const secs = formatSecs(video.duration);
   document.querySelector(".duration").innerHTML = `${mins}:${secs}`;
 };
 
@@ -52,9 +51,8 @@ const showDuration = () => {
 const showVideoCurrentTime = () => {
   const display = document.querySelector("#start");
   setInterval(() => {
-    const time = Math.floor(video.currentTime);
-    const mins = formatMins(time);
-    const secs = formatSecs(time);
+    const mins = formatMins(video.currentTime);
+    const secs = formatSecs(video.currentTime);
     display.innerHTML = `${mins}:${secs}`;
   }, 1000);
   // the interval still runs on pause (see console) would be good to clearInterval
